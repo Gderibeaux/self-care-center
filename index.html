@@ -5,19 +5,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
+    <section class ="first-title">
     <h1>Self Care Center</h1>
-    <section id="input-section">
+    </section>
+    <section class ="second-title">
       <h2>Which type of message?</h2>
-        <form>
-          <div class="rectangle">
-            <input type="radio" id="affirmation"><label>affirmation<label>
-              <input type="radio" id='mantro'><label>mantro<label>
-                <input type="button" id="message-button"></div>
-          <div class="img-rectangle"></div>
-        </form>
+    </section>
+    <section class ="first-box">
+      <input type="radio" id="affirmation-button" name="frm"> Affirmation
+      <input type="radio" id="mantro-button" name="frm"> Mantro
+      <button class="message-button" id="message-button">Recieve Message</button>
       </section>
-      <section id="message-are">
-        <p>Placeholder Text</P>
+    <section class="img-rectangle">
+        <img class="message-image" src="./assets/meditate.svg" width = 50px height = 50px>
+        <h3 class="affirmation-message hidden">
+        <h3 class="mantro-message hidden">
+      </section>
+      <button class="add-message" id="add-message">Add Message</button>
+    <script type="text/javascript" src="data.js"></script>
     <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
