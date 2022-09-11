@@ -21,7 +21,24 @@
         <h3 class="affirmation-message hidden">
         <h3 class="mantro-message hidden">
       </section>
-      <button class="add-message" id="add-message">Add Message</button>
+      <section class="controls">
+      <button class="add-message-button" id="add-message">Add Message</button>
+    </section>
+    <section class="message-box hidden">
+      <form>
+        <label for="fname">Which type of Message:</label><br>
+        <select name="which-type" id="type-message">
+        <option value="Affirmation">Affirmation</option>
+        <option value="Mantro">Mantro</option>
+      </select>
+        <label for="lname">Write your message:</label><br>
+        <input type="text" id="original-message" name="lname"><br>
+      </form>
+      <button class="submit-button" id="submit-button">Submit</button>
+    </section>
+
+
+
     <script type="text/javascript" src="data.js"></script>
     <script type="text/javascript" src="main.js"></script>
   </body>

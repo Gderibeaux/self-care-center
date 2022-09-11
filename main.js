@@ -5,10 +5,18 @@ var affirmationMessage = document.querySelector(".affirmation-message")
 var mantroMessage = document.querySelector(".mantro-message")
 var inputAffirmation = document.querySelector(".affirmation-message")
 var inputMantro = document.querySelector(".mantro-message")
-
+var formMessageButton = document.querySelector(".add-message-button")
+var fullFormView = document.querySelector(".message-box")
+var theSubmitButton = document.querySelector(".submit-button")
+var typeOfMessage = document.getElementById("#type-message")
+var originalMessage = document.getElementById("#original-message")
 // var recieveAffirmationButton = document.getElementById("affirmation-button")
 
 recieveMessageButton.addEventListener("click", recieveMessage)
+
+formMessageButton.addEventListener("click", opensFormBox)
+
+theSubmitButton.addEventListener("click", saveNewMessage)
 
 // recieveAffirmationButton.addEventListener("click", receiveAffirmation)
 
@@ -19,9 +27,6 @@ recieveMessageButton.addEventListener("click", recieveMessage)
     return Math.floor(Math.random() * array.length);
   }
 
-// function recieveMessage(){
-//   console.log(data)
-// }
 function recieveMessage(){
   if (document.getElementById('affirmation-button').checked){
     imageMessage.classList.add("hidden")
@@ -38,7 +43,17 @@ function recieveMessage(){
 }
 
 
+function opensFormBox(){
+fullFormView.classList.remove("hidden")
+}
 
+function saveNewMessage(){
+  if (typeOfMessage === "Affirmation"){
+  data.affirmation[i].push(originalMessage.value)
+} else if(typeOfMessage === "Mantro"){
+  data.mantro.push(originalMessage.value)
+}
+}
   // function getsRandomMessage(){
   //   imageMessage.classList.add("hidden")
 
