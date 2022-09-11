@@ -8,8 +8,10 @@ var inputMantro = document.querySelector(".mantro-message")
 var formMessageButton = document.querySelector(".add-message-button")
 var fullFormView = document.querySelector(".message-box")
 var theSubmitButton = document.querySelector(".submit-button")
-var typeOfMessage = document.getElementById("#type-message")
-var originalMessage = document.getElementById("#original-message")
+var typeOfMessage = document.getElementById("type-message")
+var originalMessage = document.getElementById("original-message")
+var originalAffMessage = document.querySelector(".original-aff-message")
+var originalManMessage = document.querySelector(".original-mantro-message")
 // var recieveAffirmationButton = document.getElementById("affirmation-button")
 
 recieveMessageButton.addEventListener("click", recieveMessage)
@@ -31,11 +33,15 @@ function recieveMessage(){
   if (document.getElementById('affirmation-button').checked){
     imageMessage.classList.add("hidden")
     mantroMessage.classList.add("hidden")
+    originalManMessage.classList.add("hidden")
+    originalAffMessage.classList.add("hidden")
     affirmationMessage.classList.remove("hidden")
     affirmationMessage.innerText = data.affirmation[getRandomIndex(data.affirmation)]
 }else if(document.getElementById('mantro-button').checked){
   imageMessage.classList.add("hidden")
   affirmationMessage.classList.add("hidden")
+  originalManMessage.classList.add("hidden")
+  originalAffMessage.classList.add("hidden")
   mantroMessage.classList.remove("hidden")
   mantroMessage.innerText = data.mantro[getRandomIndex(data.mantro)]
 
@@ -48,10 +54,24 @@ fullFormView.classList.remove("hidden")
 }
 
 function saveNewMessage(){
-  if (typeOfMessage === "Affirmation"){
-  data.affirmation[i].push(originalMessage.value)
-} else if(typeOfMessage === "Mantro"){
+  if (typeOfMessage.value === "Affirmation"){
+  data.affirmation.push(originalMessage.value)
+  imageMessage.classList.add("hidden")
+  mantroMessage.classList.add("hidden")
+  affirmationMessage.classList.add("hidden")
+  originalManMessage.classList.add("hidden")
+  originalAffMessage.classList.remove("hidden")
+  originalAffMessage.innerText = originalMessage.value
+} else if(typeOfMessage.value === "Mantro"){
   data.mantro.push(originalMessage.value)
+  imageMessage.classList.add("hidden")
+  mantroMessage.classList.add("hidden")
+  affirmationMessage.classList.add("hidden")
+  originalAffMessage.classList.add("hidden")
+  originalManMessage.classList.remove("hidden")
+  originalManMessage.innerText = originalMessage.value
+}else{
+  alert("Pick a type of message!")
 }
 }
   // function getsRandomMessage(){
