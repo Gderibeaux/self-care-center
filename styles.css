@@ -39,7 +39,7 @@ body {
 
 }
 
-#message-button{
+.message-button{
   align-content: center;
   background-color: #134d71;
   border-radius: 5px;
@@ -48,10 +48,12 @@ body {
   font-family: 'Quicksand', sans-serif;
   font-size: 10px;
   height: 20px;
+  margin-top: 50px;
   margin-bottom: 10px;
   margin: auto;
   padding: auto;
   padding-top: 5px;
+  padding-bottom: 5px;
   width: 100px;
 
 }
