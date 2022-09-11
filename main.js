@@ -12,7 +12,7 @@ var typeOfMessage = document.getElementById("type-message")
 var originalMessage = document.getElementById("original-message")
 var originalAffMessage = document.querySelector(".original-aff-message")
 var originalManMessage = document.querySelector(".original-mantro-message")
-// var recieveAffirmationButton = document.getElementById("affirmation-button")
+
 
 recieveMessageButton.addEventListener("click", recieveMessage)
 
@@ -20,7 +20,7 @@ formMessageButton.addEventListener("click", opensFormBox)
 
 theSubmitButton.addEventListener("click", saveNewMessage)
 
-// recieveAffirmationButton.addEventListener("click", receiveAffirmation)
+
 
 
 
@@ -74,23 +74,3 @@ function saveNewMessage(){
   alert("Pick a type of message!")
 }
 }
-  // function getsRandomMessage(){
-  //   imageMessage.classList.add("hidden")
-
-
-
-  //more eventlisteners
-  /*
-more eventlisteners
-how to access value of checks and unchecked radio
-use those keys to access value of the arrays
-use alength of the array to use as high end for random number
-after user inner html
-
-
-
-add text area to add message
-add more radio buttons to access the arnew arrays
-
-
-  */
